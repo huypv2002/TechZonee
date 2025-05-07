@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giới thiệu - TechZone Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .navbar {
+            border-bottom: 3px solid #dc3545;
+        }
+
+        .btn-danger {
+            background-color: #dc3545;
+            border-color: #dc3545;
+        }
+
+        .footer {
+            background-color: #f8f9fa;
+            border-top: 1px solid #dee2e6;
+        }
+
+        .page-title {
+            color: #dc3545;
+            margin-bottom: 2rem;
+            border-bottom: 2px solid #dc3545;
+            padding-bottom: 10px;
+            display: inline-block;
+        }
+
+        .content-section {
+            background-color: #fff;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar .badge {
+            font-size: 0.6em;
+            padding: 0.3em 0.5em;
+            vertical-align: top;
+            margin-left: -5px;
+            display: none;
+        }
+
+        a {
+            color: #dc3545;
+            text-decoration: none;
+        }
+
+        a:hover {
+            color: #a71d2a;
+        }
+
+        .about-img {
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin-bottom: 1.5rem;
+        }
+
+        .history-timeline {
+            position: relative;
+            padding-left: 30px;
+            margin-top: 20px;
+        }
+
+        .history-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background-color: #dc3545;
+        }
+
+        .timeline-item {
+            position: relative;
+            padding-bottom: 25px;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -34px;
+            top: 5px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background-color: #dc3545;
+        }
+
+        .values-icon {
+            font-size: 2rem;
+            color: #dc3545;
+            margin-bottom: 1rem;
+        }
+
+        .team-member img {
+            transition: transform 0.3s ease;
+        }
+
+        .team-member:hover img {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand text-danger fw-bold" href="index.html"><img src="./images/logo.png" width="128"
+                    height="80" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"> <span
+                    class="navbar-toggler-icon"></span> </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"> <a class="nav-link" href="index.html">Trang chủ</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="products.html">Sản phẩm</a> </li>
+                    <li class="nav-item"> <a class="nav-link active" aria-current="page" href="about.html">Giới
+                            thiệu</a> </li>
+                    <li class="nav-item"> <a class="nav-link" href="order-history.html">Lịch sử mua hàng</a> </li>
+                </ul>
+                <form class="d-flex mx-auto" action="search.html" method="get"> <input
+                        class="form-control me-2 form-control-sm" type="search" name="keyword"
+                        placeholder="Tìm kiếm sản phẩm..." aria-label="Search"> <button
+                        class="btn btn-outline-danger btn-sm" type="submit"><i class="bi bi-search"></i></button>
+                </form>
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 align-items-center">
+                    <li class="nav-item"> <a class="nav-link" href="cart.html"> <i
+                                class="bi bi-cart-fill position-relative fs-5 text-dark"> <span
+                                    class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
+                                    0 <span class="visually-hidden">sản phẩm trong giỏ</span> </span> </i> </a> </li>
+                    <li class="nav-item" id="nav-login-register"> <a class="btn btn-outline-danger btn-sm me-2"
+                            href="login.html">Đăng nhập</a> <a class="btn btn-danger btn-sm" href="register.html">Đăng
+                            ký</a> </li>
+                    <li class="nav-item dropdown" id="nav-user-account" style="display: none;"> <a
+                            class="nav-link dropdown-toggle d-flex align-items-center" href="#" id="navbarDropdownUser"
+                            role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i
+                                class="bi bi-person-circle fs-5 text-dark me-1"></i> <span id="nav-username"
+                                class="small">Tên User</span> </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdownUser">
+                            <li><a class="dropdown-item small" href="#"><i class="bi bi-person-fill me-2"></i>Tài khoản
+                                    của tôi</a></li>
+                            <li><a class="dropdown-item small" href="order-history.html"><i
+                                        class="bi bi-receipt-cutoff me-2"></i>Lịch sử mua hàng</a></li>
+                            <li>
+                                <hr class="dropdown-divider">
+                            </li>
+                            <li><a class="dropdown-item small" href="#" id="nav-logout"><i
+                                        class="bi bi-box-arrow-right me-2"></i>Đăng xuất</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="container py-4">
+        <div class="row justify-content-center">
+            <div class="col-lg-10">
+                <div class="content-section">
+                    <h1 class="text-center page-title mb-4">Giới thiệu về TechZone</h1>
+
+                    <div class="row">
+                        <div class="col-md-8 mb-4">
+                            <p class="lead">Chào mừng bạn đến với TechZone - nhà phân phối chính thức các sản phẩm công
+                                nghệ hàng đầu từ các thương hiệu uy tín như Apple, Samsung, Logitech và nhiều thương
+                                hiệu danh tiếng khác tại Việt Nam.</p>
+
+                            <p>Được thành lập vào năm 2018, TechZone đã nhanh chóng khẳng định vị thế của mình như một
+                                điểm đến tin cậy cho người dùng công nghệ tại Việt Nam. Chúng tôi tự hào mang đến những
+                                sản phẩm công nghệ chính hãng, chất lượng cao cùng với dịch vụ chăm sóc khách hàng tận
+                                tâm.</p>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <img src="https://images.unsplash.com/photo-1491933382434-500287f9b54b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                                alt="TechZone Store" class="img-fluid about-img w-100">
+                        </div>
+                    </div>
+
+                    <h3 class="text-danger mt-4">Sứ mệnh của chúng tôi</h3>
+                    <p>Chúng tôi mong muốn mang đến cho khách hàng những sản phẩm công nghệ mới nhất, chất lượng nhất
+                        với mức giá cạnh tranh nhất trên thị trường. TechZone cam kết:</p>
+                    <div class="row mt-4 mb-5">
+                        <div class="col-md-4 text-center mb-4">
+                            <div class="values-icon">
+                                <i class="bi bi-shield-check"></i>
+                            </div>
+                            <h5>Chất lượng đảm bảo</h5>
+                            <p class="small">100% sản phẩm chính hãng, được nhập khẩu trực tiếp từ các nhà sản xuất hoặc
+                                từ các đơn vị phân phối chính thức.</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-4">
+                            <div class="values-icon">
+                                <i class="bi bi-headset"></i>
+                            </div>
+                            <h5>Dịch vụ tận tâm</h5>
+                            <p class="small">Đội ngũ nhân viên chuyên nghiệp, am hiểu công nghệ và luôn sẵn sàng hỗ trợ
+                                khách hàng 24/7.</p>
+                        </div>
+                        <div class="col-md-4 text-center mb-4">
+                            <div class="values-icon">
+                                <i class="bi bi-wallet2"></i>
+                            </div>
+                            <h5>Giá cả cạnh tranh</h5>
+                            <p class="small">Cam kết mang đến mức giá tốt nhất cho khách hàng cùng nhiều chương trình
+                                khuyến mãi hấp dẫn.</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-danger mt-5">Câu chuyện thương hiệu</h3>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <p>TechZone là kết quả của niềm đam mê công nghệ và khát khao được phục vụ người dùng Việt
+                                Nam của nhóm sáng lập. Chúng tôi đã bắt đầu với một cửa hàng nhỏ tại Hà Nội, chuyên cung
+                                cấp các sản phẩm Apple chính hãng.</p>
+
+                            <p>Từ một cửa hàng nhỏ, chúng tôi đã phát triển thành hệ thống với hơn 20 showroom trên toàn
+                                quốc, phục vụ hàng nghìn khách hàng mỗi ngày.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="history-timeline">
+                                <div class="timeline-item">
+                                    <h5>2018</h5>
+                                    <p>Khai trương cửa hàng đầu tiên tại Hà Nội, chuyên kinh doanh sản phẩm Apple.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5>2020</h5>
+                                    <p>Mở rộng thành 5 cửa hàng tại Hà Nội và TP.HCM, bổ sung thêm các sản phẩm từ
+                                        Samsung, Xiaomi.</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5>2022</h5>
+                                    <p>Trở thành đối tác ủy quyền chính thức của Apple tại Việt Nam (Apple Authorized
+                                        Reseller).</p>
+                                </div>
+                                <div class="timeline-item">
+                                    <h5>2025</h5>
+                                    <p>Hiện tại: 20+ showroom trên toàn quốc, Top 3 nhà bán lẻ thiết bị công nghệ tại
+                                        Việt Nam.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <h3 class="text-danger mt-5">Đội ngũ lãnh đạo</h3>
+                    <div class="row mt-4 text-center">
+                        <div class="col-md-4 mb-4 team-member">
+                            <img src="./images/ngan1.jpg" class="rounded-circle mb-3" alt="CEO" width="150"
+                                height="150">
+                            <h5>Hồ Hoàng Ngân</h5>
+                            <p class="text-muted">Thiết Kế Back-end</p>
+                            <p class="small">15 năm kinh nghiệm trong lĩnh vực công nghệ và bán lẻ</p>
+                        </div>
+                        <div class="col-md-4 mb-4 team-member">
+                            <img src="https://scontent.fsgn2-8.fna.fbcdn.net/v/t39.30808-1/475802031_1344008279935140_3794234652119166569_n.jpg?stp=dst-jpg_s200x200_tt6&_nc_cat=102&ccb=1-7&_nc_sid=e99d92&_nc_ohc=miI8SG4SVKEQ7kNvwFKyXwF&_nc_oc=AdnpSsR9GWWHAJcYSg5G2NpN6h45qq2dz807VIS_B-Xeou5O6PIOioIwQWMRPO80gt9nwgrrfg4YKaztxfj4eIVc&_nc_zt=24&_nc_ht=scontent.fsgn2-8.fna&_nc_gid=AxCOMPtc6YF1YtuK0waiuQ&oh=00_AfINE6cssnbFzJJq0VBJTajnKRcjfrvjMNUQQHYDgjr4cw&oe=6820D182"
+                                class="rounded-circle mb-3" alt="COO" width="150" height="150">
+                            <h5>Hồ Hoàng Ngân</h5>
+                            <p class="text-muted">Thiết Kế Giao Diện (GUI)</p>
+                            <p class="small">Chuyên gia về chuỗi cung ứng và quản lý vận hành</p>
+                        </div>
+                        <div class="col-md-4 mb-4 team-member">
+                            <img src="https://scontent.fsgn2-9.fna.fbcdn.net/v/t39.30808-6/494035940_1405601210442513_670993182620409026_n.jpg?stp=c0.168.1538.1538a_cp6_dst-jpg_s206x206_tt6&_nc_cat=106&ccb=1-7&_nc_sid=50ad20&_nc_ohc=xS3-xcQEDswQ7kNvwGlad1L&_nc_oc=AdnGh1MfPEtwL12risi5uCNuhRp5m33olzHcvsDNaaWvya77x66-2r6iLggQs4gcDxGtktQr53uT8X_98Yw3LCsT&_nc_zt=23&_nc_ht=scontent.fsgn2-9.fna&_nc_gid=mt_g8ekR8r6FBFJTVgyHNQ&oh=00_AfKTQUGYlpntLQohypEFHwMLoboFlxCVDtQvvc6r81Pc8w&oe=6820BB91"
+                                class="rounded-circle mb-3" alt="CTO" width="150" height="150">
+                            <h5>Hồ Hoàng Ngân</h5>
+                            <p class="text-muted">Thiết Kế Front-end</p>
+                            <p class="small">Phụ trách phát triển website, ứng dụng và hệ thống quản lý</p>
+                        </div>
+                    </div>
+
+                    <h3 class="text-danger mt-5">Đối tác của chúng tôi</h3>
+                    <div class="row align-items-center text-center mt-4 mb-5">
+                        <div class="col-4 col-md-2 mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Apple_logo_black.svg/1667px-Apple_logo_black.svg.png"
+                                alt="Apple" class="img-fluid" style="max-height: 60px;">
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Samsung_Logo.svg/2560px-Samsung_Logo.svg.png"
+                                alt="Samsung" class="img-fluid" style="max-height: 60px;">
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/9d/Marshall_logo.svg/2560px-Marshall_logo.svg.png"
+                                alt="Marshall" class="img-fluid" style="max-height: 60px;">
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/29/Logitech_logo.svg/2560px-Logitech_logo.svg.png"
+                                alt="Logitech" class="img-fluid" style="max-height: 60px;">
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Sony_logo.svg/2560px-Sony_logo.svg.png"
+                                alt="Sony" class="img-fluid" style="max-height: 60px;">
+                        </div>
+                        <div class="col-4 col-md-2 mb-4">
+                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/ae/Xiaomi_logo_%282021-%29.svg/2048px-Xiaomi_logo_%282021-%29.svg.png"
+                                alt="Xiaomi" class="img-fluid" style="max-height: 60px;">
+                        </div>
+                    </div>
+
+                    <h3 class="text-danger mt-5">Liên hệ</h3>
+                    <div class="row mt-4">
+                        <div class="col-md-6 mb-4">
+                            <h5>Trụ sở chính</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-geo-alt-fill me-2 text-danger"></i> 01 Đ. Võ Văn Ngân, Linh Chiểu,
+                                    Thủ Đức, Hồ Chí Minh, Việt Nam</li>
+                                <li><i class="bi bi-telephone-fill me-2 text-danger"></i> <a href="tel:0987654321">0987
+                                        654 321</a></li>
+                                <li><i class="bi bi-envelope-fill me-2 text-danger"></i> <a
+                                        href="mailto:info@techzone.vn">info@techzone.vn</a></li>
+                                <li><i class="bi bi-clock-fill me-2 text-danger"></i> 8:00 - 22:00 (tất cả các ngày
+                                    trong tuần)</li>
+                            </ul>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <h5>Showroom lớn</h5>
+                            <ul class="list-unstyled">
+                                <li><i class="bi bi-geo-alt-fill me-2 text-danger"></i> Cơ sở 1: 456 Xã Đàn, Đống Đa, Hà
+                                    Nội</li>
+                                <li><i class="bi bi-geo-alt-fill me-2 text-danger"></i> Cơ sở 2: 789 Nguyễn Thái Học,
+                                    Quận 1, TP.HCM</li>
+                                <li><i class="bi bi-geo-alt-fill me-2 text-danger"></i> Cơ sở 3: 159 Nguyễn Văn Linh,
+                                    Hải Châu, Đà Nẵng</li>
+                                <li><i class="bi bi-link-45deg me-2 text-danger"></i> <a href="#">Xem tất cả
+                                        showroom</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="ratio ratio-16x9">
+                                <iframe
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3918.4853986111193!2d106.7693381757038!3d10.850637657819123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752763f23816ab%3A0x282f711441b6916f!2zVHLGsOG7nW5nIMSQ4bqhaSBo4buNYyBTxrAgcGjhuqFtIEvhu7kgdGh14bqtdCBUaMOgbmggcGjhu5EgSOG7kyBDaMOtIE1pbmg!5e0!3m2!1svi!2s!4v1746594912306!5m2!1svi!2s"
+                                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer mt-auto py-3 bg-light border-top">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 mb-3">
+                    <h5 class="text-danger"> <a class="navbar-brand text-danger fw-bold" href="index.html"><img
+                                src="./images/logo.png" width="128" height="80" alt=""></a>
+                    </h5>
+                    <p class="text-muted small">Chuyên cung cấp các sản phẩm chất lượng cao với giá cả hợp lý. Cam kết
+                        uy tín và dịch vụ khách hàng tốt nhất.</p>
+                </div>
+                <div class="col-md-2 col-6 mb-3">
+                    <h5>Về chúng tôi</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="link-secondary text-decoration-none" href="about.html">Giới thiệu</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Tuyển dụng</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Liên hệ</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-6 mb-3">
+                    <h5>Hỗ trợ khách hàng</h5>
+                    <ul class="list-unstyled text-small">
+                        <li><a class="link-secondary text-decoration-none" href="#">Hướng dẫn mua hàng</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Chính sách đổi trả</a></li>
+                        <li><a class="link-secondary text-decoration-none" href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 mb-3">
+                    <h5>Kết nối với chúng tôi</h5> <a href="#" class="link-secondary text-decoration-none me-2 fs-4"><i
+                            class="bi bi-facebook"></i></a> <a href="#"
+                        class="link-secondary text-decoration-none me-2 fs-4"><i class="bi bi-youtube"></i></a> <a
+                        href="#" class="link-secondary text-decoration-none me-2 fs-4"><i
+                            class="bi bi-instagram"></i></a>
+                </div>
+            </div>
+            <hr>
+            <p class="text-center text-muted small mb-0">&copy; 2025 TechZone. Đã đăng ký Bản quyền.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/common.js"></script>
+</body>
+
+</html>
