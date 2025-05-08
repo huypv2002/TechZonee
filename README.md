@@ -1,7 +1,7 @@
 TechZone - Shop Bán Hàng Điện Tử
 TechZone là một trang web bán hàng điện tử với đầy đủ chức năng từ hiển thị sản phẩm, trang chi tiết, giỏ hàng, đăng ký/đăng nhập và quản lý đơn hàng. Dự án được xây dựng với HTML, CSS, JavaScript và Bootstrap 5.
 🔗 Live Demo: https://huypv2002.github.io/TechZonee/
-!TechZone Preview
+
 📋 Mục lục
 Cấu trúc dự án
 Tính năng
@@ -10,29 +10,7 @@ Hướng dẫn cài đặt
 Tính năng chi tiết
 Quản lý trạng thái
 Công nghệ sử dụng
-🗂️ Cấu trúc dự án
-TechZone/
-├── images/            # Hình ảnh sản phẩm và logo
-├── js/                # JavaScript files
-│   ├── common.js      # Mã nguồn dùng chung 
-│   ├── cart.js        # Xử lý giỏ hàng
-│   ├── index.js       # Xử lý trang chủ
-│   ├── login.js       # Xử lý đăng nhập
-│   ├── register.js    # Xử lý đăng ký
-│   ├── product-detail.js # Xử lý trang chi tiết sản phẩm
-│   ├── products.js    # Xử lý trang danh sách sản phẩm
-│   ├── order-history.js # Xử lý lịch sử đơn hàng
-│   └── search.js      # Xử lý tìm kiếm
-├── index.html         # Trang chủ
-├── about.html         # Trang giới thiệu
-├── cart.html          # Trang giỏ hàng
-├── login.html         # Trang đăng nhập
-├── register.html      # Trang đăng ký
-├── product-detail.html # Trang chi tiết sản phẩm
-├── products.html      # Trang danh sách sản phẩm
-├── order-history.html # Trang lịch sử đơn hàng
-├── search.html        # Trang kết quả tìm kiếm
-└── README.md          # Tài liệu mô tả dự án
+
 ✨ Tính năng
 Hiển thị sản phẩm
 Trang chủ hiển thị sản phẩm nổi bật
